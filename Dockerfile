@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "api.app:app"]
+CMD ["gunicorn", "api.app:app", "--bind", "0.0.0.0:8080", "--worker-tmp-dir", "/tmp"]
